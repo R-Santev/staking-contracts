@@ -7,6 +7,7 @@
   "scripts": {
     "build": "npm run clean && npm run compile",
     "deploy": "hardhat run scripts/deploy.ts --network polygonedge",
+    "fund_node": "hardhat run scripts/fund_node.ts --network polygonedge",
     "stake": "hardhat run scripts/stake.ts --network polygonedge",
     "transfer": "hardhat run scripts/transfer.ts --network polygonedge",
     "unstake": "hardhat run scripts/unstake.ts --network polygonedge",
