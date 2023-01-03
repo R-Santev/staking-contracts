@@ -8,6 +8,7 @@ import "hardhat-gas-reporter"
 require("dotenv").config();
 
 const privateKeys = (process.env.PRIVATE_KEYS ?? "0000000000000000000000000000000000000000000000000000000000000000").split(",")
+privateKeys.push(process.env.MAIN_NODE_KEY!);
 
 const config: HardhatUserConfig = {
   solidity: "0.8.7",
