@@ -8,10 +8,10 @@ async function main() {
 
   console.log(
     "Fund node",
+    account.address,
     "from",
-    account.address
+    mainNode.address
   );
-  console.log("Account balance:", (await account.getBalance()).toString());
 
   const tx = await mainNode.sendTransaction({
     to: account.address,
