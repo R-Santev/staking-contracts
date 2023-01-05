@@ -18,12 +18,15 @@ async function main() {
     value: STAKE_AMOUNT,
     // nonce: await mainNode.getTransactionCount(),
     gasLimit: "0x100000",
-    gasPrice: await mainNode.getGasPrice(),
+    gasPrice: await mainNode.getGasPrice()
   })
     .catch(err => {
       console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! tx error ', err);
       
-    })
+    });
+
+    console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ tx', tx);
+  
   if (!tx) {
     return;
   }
