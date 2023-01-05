@@ -16,7 +16,7 @@ async function main() {
   const tx = await mainNode.sendTransaction({
     to: account.address,
     value: STAKE_AMOUNT,
-    nonce: await mainNode.getTransactionCount(),
+    // nonce: await mainNode.getTransactionCount(),
     gasLimit: "0x100000",
     gasPrice: await mainNode.getGasPrice(),
   });
