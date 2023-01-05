@@ -19,7 +19,15 @@ async function main() {
     // nonce: await mainNode.getTransactionCount(),
     gasLimit: "0x100000",
     gasPrice: await mainNode.getGasPrice(),
-  });
+  })
+    .catch(err => {
+      console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! tx error ', err);
+      
+    })
+  if (!tx) {
+    return;
+  }
+
   const receipt = await tx.wait();
 
   console.log("receipt", receipt);
